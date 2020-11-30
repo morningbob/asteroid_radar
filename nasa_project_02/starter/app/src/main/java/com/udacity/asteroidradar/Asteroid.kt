@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey
 import kotlinx.android.parcel.Parcelize
 
 @Entity(tableName = "asteroidsTable")
-//@Parcelize
+@Parcelize
 data class Asteroid constructor(
     @PrimaryKey
     var id: Long,
@@ -24,4 +24,4 @@ data class Asteroid constructor(
 
     val distanceFromEarth: Double,
 
-    val isPotentiallyHazardous: Boolean) //: Parcelable
+    val isPotentiallyHazardous: Boolean) : Parcelable

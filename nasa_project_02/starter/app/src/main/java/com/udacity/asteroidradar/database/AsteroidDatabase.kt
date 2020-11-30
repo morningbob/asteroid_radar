@@ -12,9 +12,9 @@ abstract class AsteroidDatabase : RoomDatabase() {
 
     abstract val asteroidDatabaseDao: AsteroidDatabaseDao
 
-    private lateinit var INSTANCE: AsteroidDatabase
+    //private lateinit var INSTANCE: AsteroidDatabase
 
-    /*
+
     companion object {
         @Volatile
         private var INSTANCE: AsteroidDatabase? = null
@@ -37,7 +37,7 @@ abstract class AsteroidDatabase : RoomDatabase() {
         }
     }
 }
-*/
+/*
     fun getInstance(context: Context): AsteroidDatabase {
         synchronized(AsteroidDatabase::class.java) {
             if (!::INSTANCE.isInitialized) {
@@ -51,3 +51,4 @@ abstract class AsteroidDatabase : RoomDatabase() {
         return INSTANCE
     }
 }
+*/
