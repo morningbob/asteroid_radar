@@ -7,13 +7,13 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.udacity.asteroidradar.Asteroid
 import com.udacity.asteroidradar.AsteroidApplication
-
+/*
 class DetailViewModel(val asteroidDetails: Asteroid, application: Application)
     : ViewModel() {
 
     private val _asteroid = MutableLiveData<Asteroid>()
 
-    val asteroid: LiveData<Asteroid>
+    var asteroid: LiveData<Asteroid?>
         get() = _asteroid
 
     init {
@@ -36,3 +36,4 @@ class DetailViewModelFactory (
         throw IllegalArgumentException("Unknown ViewModel class")
     }
 }
+*/

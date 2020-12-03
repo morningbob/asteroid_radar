@@ -5,18 +5,25 @@
 
     <data>
         <variable
-            name="detailViewModel"
-            type="com.udacity.asteroidradar.main.DetailViewModel" />
+          name="asteroid"
+          type="com.udacity.asteroidradar.Asteroid" />
+
+        <variable
+          name="clicklistener"
+          type="com.udacity.asteroidradar.main.AsteroidAdapter.AsteroidListener" />
     </data>
 
     <LinearLayout
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="horizontal"
+        android:onClick="@{() -> clicklistener.onClick(asteroid)}"
+      >
 
         <TextView
             android:id="@+id/codeName"
+            android:layout_weight="3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
@@ -27,6 +34,15 @@
             android:textColor="@color/default_text_color"
             android:textSize="30dp" />
 
+        <ImageView
+          android:layout_width="100dp"
+          android:layout_height="100dp"
+          android:layout_weight="1"
+          android:layout_marginTop="20dp"
+          android:layout_marginBottom="40dp"
+          android:layout_marginLeft="30dp"
+          android:layout_marginRight="30dp"
+          android:src="@{asteroid.potentiallyHazardous ? @drawable/ic_status_potentially_hazardous : @drawable/ic_status_normal}"/>
 
 
     </LinearLayout>
